@@ -18,8 +18,7 @@ jobs:
         java-version: 1.11
     - name: Android build
       run: |
-        chmod +x gradlew
-        ./gradlew compileDebugSources  
+        gradle compileDebugSources  
     - name: Perform ShiftLeft Scan
       uses: ShiftLeftSecurity/scan-action@master
       env:
